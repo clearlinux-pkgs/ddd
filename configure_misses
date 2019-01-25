@@ -1,0 +1,52 @@
+Configure miss: expiration date
+Configure miss: f2c
+Configure miss: gsed
+Configure miss: gdiff
+Configure miss: remsh
+Configure miss: rsh
+Configure miss: on
+Configure miss: gcore
+Configure miss: compface
+Configure miss: xbm2xface.pl
+Configure miss: xbm2xface
+Configure miss: gdb
+Configure miss: wdb
+Configure miss: dbx
+Configure miss: ladebug
+Configure miss: xdb
+Configure miss: jdb
+Configure miss: xterm
+Configure miss: kterm
+Configure miss: dtterm
+Configure miss: hpterm
+Configure miss: xfontsel
+Configure miss: if this is a problematic g++ version
+Configure miss: whether the C++ compiler (g++) accepts -mminimal-toc
+Configure miss: whether we are using the GNU Fortran 77 compiler
+Configure miss: whether g77 accepts -g
+Configure miss: if g77 PIC flag -fPIC works
+Configure miss: if g77 static flag -static works
+Configure miss: if g77 supports -c -o file.o
+Configure miss: regcmp
+Configure miss: regcmp in -lgen
+Configure miss: yyerror in -ly
+Configure miss: tgetent in -lmytinfo
+Configure miss: streampos
+Configure miss: whether libXp is in the standard X library path
+Configure miss: whether compiling X headers requires -fpermissive
+Configure miss: _Xlcmbcurmax in -lXintl
+Configure miss: shmap in -lipc
+Configure miss: XpSelectInput in -lXp
+Configure miss: Xm21InstallImage in -lXm
+Configure miss: sys/int_types.h usability
+Configure miss: sys/int_types.h presence
+Configure miss: sys/int_types.h
+Configure miss: sys/vty.h usability
+Configure miss: sys/vty.h presence
+Configure miss: sys/vty.h
+Configure miss: PTRACE_DUMPCORE definition in <sys/ptrace.h>
+Configure miss: _getpty
+Configure miss: alloca
+Configure miss: getpty
+Configure miss: setpgrp2
+Configure miss: fixes needed for Mac OS X

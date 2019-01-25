@@ -1,0 +1,8 @@
+3.3.12
+bison
+elfutils-dev
+flex
+ncurses-dev
+pkgconfig(x11)
+pkgconfig(xmu)
+pkgconfig(xt)
