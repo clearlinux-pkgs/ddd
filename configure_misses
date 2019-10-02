@@ -38,9 +38,15 @@ Configure miss: _Xlcmbcurmax in -lXintl
 Configure miss: shmap in -lipc
 Configure miss: XpSelectInput in -lXp
 Configure miss: Xm21InstallImage in -lXm
+Configure miss: stropts.h usability
+Configure miss: stropts.h presence
+Configure miss: stropts.h
 Configure miss: sys/int_types.h usability
 Configure miss: sys/int_types.h presence
 Configure miss: sys/int_types.h
+Configure miss: sys/stropts.h usability
+Configure miss: sys/stropts.h presence
+Configure miss: sys/stropts.h
 Configure miss: sys/vty.h usability
 Configure miss: sys/vty.h presence
 Configure miss: sys/vty.h

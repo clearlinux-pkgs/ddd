@@ -6,10 +6,10 @@
 #
 Name     : ddd
 Version  : 3.3.12
-Release  : 1
+Release  : 2
 URL      : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
 Source0  : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
-Source99 : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz.sig
+Source1 : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz.sig
 Summary  : graphical debugger front-end; GDB, DBX, Ladebug, JDB, Perl, Python
 Group    : Development/Tools
 License  : GFDL-1.1 GPL-3.0 LGPL-3.0
@@ -25,6 +25,7 @@ BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(x11)
 BuildRequires : pkgconfig(xmu)
 BuildRequires : pkgconfig(xt)
+Patch1: friend-default.patch
 
 %description
 This is the source distribution of DDD, the Data Display Debugger.
@@ -36,7 +37,6 @@ Summary: bin components for the ddd package.
 Group: Binaries
 Requires: ddd-data = %{version}-%{release}
 Requires: ddd-license = %{version}-%{release}
-Requires: ddd-man = %{version}-%{release}
 
 %description bin
 bin components for the ddd package.
@@ -77,18 +77,24 @@ man components for the ddd package.
 
 %prep
 %setup -q -n ddd-3.3.12
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1548374843
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1570041674
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1548374843
+export SOURCE_DATE_EPOCH=1570041674
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ddd
 cp COPYING %{buildroot}/usr/share/package-licenses/ddd/COPYING
