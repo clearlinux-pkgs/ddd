@@ -6,7 +6,7 @@
 #
 Name     : ddd
 Version  : 3.3.12
-Release  : 2
+Release  : 3
 URL      : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
 Source0  : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
 Source1 : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz.sig
@@ -15,6 +15,7 @@ Group    : Development/Tools
 License  : GFDL-1.1 GPL-3.0 LGPL-3.0
 Requires: ddd-bin = %{version}-%{release}
 Requires: ddd-data = %{version}-%{release}
+Requires: ddd-info = %{version}-%{release}
 Requires: ddd-license = %{version}-%{release}
 Requires: ddd-man = %{version}-%{release}
 BuildRequires : bison
@@ -50,13 +51,12 @@ Group: Data
 data components for the ddd package.
 
 
-%package doc
-Summary: doc components for the ddd package.
-Group: Documentation
-Requires: ddd-man = %{version}-%{release}
+%package info
+Summary: info components for the ddd package.
+Group: Default
 
-%description doc
-doc components for the ddd package.
+%description info
+info components for the ddd package.
 
 
 %package license
@@ -77,6 +77,7 @@ man components for the ddd package.
 
 %prep
 %setup -q -n ddd-3.3.12
+cd %{_builddir}/ddd-3.3.12
 %patch1 -p1
 
 %build
@@ -84,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570041674
+export SOURCE_DATE_EPOCH=1573777049
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -94,12 +95,12 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1570041674
+export SOURCE_DATE_EPOCH=1573777049
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ddd
-cp COPYING %{buildroot}/usr/share/package-licenses/ddd/COPYING
-cp COPYING.DOC %{buildroot}/usr/share/package-licenses/ddd/COPYING.DOC
-cp COPYING.LESSER %{buildroot}/usr/share/package-licenses/ddd/COPYING.LESSER
+cp %{_builddir}/ddd-3.3.12/COPYING %{buildroot}/usr/share/package-licenses/ddd/338650eb7a42dd9bc1f1c6961420f2633b24932d
+cp %{_builddir}/ddd-3.3.12/COPYING.DOC %{buildroot}/usr/share/package-licenses/ddd/c61905dc64311e8bcee6afc425fa40f917a45131
+cp %{_builddir}/ddd-3.3.12/COPYING.LESSER %{buildroot}/usr/share/package-licenses/ddd/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
 %make_install
 
 %files
@@ -144,15 +145,18 @@ cp COPYING.LESSER %{buildroot}/usr/share/package-licenses/ddd/COPYING.LESSER
 /usr/share/ddd-3.3.12/vsllib/vsldef.vsl
 /usr/share/ddd-3.3.12/vsllib/vsllib.vsl
 
-%files doc
+%files info
 %defattr(0644,root,root,0755)
-%doc /usr/share/info/*
+/usr/share/info/ddd-themes.info
+/usr/share/info/ddd.info
+/usr/share/info/ddd.info-1
+/usr/share/info/ddd.info-2
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/ddd/COPYING
-/usr/share/package-licenses/ddd/COPYING.DOC
-/usr/share/package-licenses/ddd/COPYING.LESSER
+/usr/share/package-licenses/ddd/338650eb7a42dd9bc1f1c6961420f2633b24932d
+/usr/share/package-licenses/ddd/c61905dc64311e8bcee6afc425fa40f917a45131
+/usr/share/package-licenses/ddd/e7d563f52bf5295e6dba1d67ac23e9f6a160fab9
 
 %files man
 %defattr(0644,root,root,0755)
