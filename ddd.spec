@@ -6,10 +6,10 @@
 #
 Name     : ddd
 Version  : 3.3.12
-Release  : 3
-URL      : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
-Source0  : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz
-Source1 : https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz.sig
+Release  : 4
+URL      : https://mirrors.kernel.org/gnu/ddd/ddd-3.3.12.tar.gz
+Source0  : https://mirrors.kernel.org/gnu/ddd/ddd-3.3.12.tar.gz
+Source1  : https://mirrors.kernel.org/gnu/ddd/ddd-3.3.12.tar.gz.sig
 Summary  : graphical debugger front-end; GDB, DBX, Ladebug, JDB, Perl, Python
 Group    : Development/Tools
 License  : GFDL-1.1 GPL-3.0 LGPL-3.0
@@ -85,17 +85,17 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1573777049
+export SOURCE_DATE_EPOCH=1605126009
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1573777049
+export SOURCE_DATE_EPOCH=1605126009
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ddd
 cp %{_builddir}/ddd-3.3.12/COPYING %{buildroot}/usr/share/package-licenses/ddd/338650eb7a42dd9bc1f1c6961420f2633b24932d
