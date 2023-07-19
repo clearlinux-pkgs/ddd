@@ -1,8 +1,10 @@
-3.3.12
+3.4.0
 bison
 elfutils-dev
 flex
 ncurses-dev
 pkgconfig(x11)
+pkgconfig(xaw)
 pkgconfig(xmu)
+pkgconfig(xpm)
 pkgconfig(xt)
