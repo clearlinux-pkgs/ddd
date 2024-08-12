@@ -1,10 +1,7 @@
-3.4.0
+3.4.1
 bison
 elfutils-dev
+file
 flex
+libXft-dev
 ncurses-dev
-pkgconfig(x11)
-pkgconfig(xaw)
-pkgconfig(xmu)
-pkgconfig(xpm)
-pkgconfig(xt)

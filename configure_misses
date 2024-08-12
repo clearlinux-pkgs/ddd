@@ -20,6 +20,8 @@ Configure miss: f2c
 Configure miss: f2c
 Configure miss: fixes needed for Mac OS X
 Configure miss: fixes needed for Mac OS X
+Configure miss: fixes needed for Solaris
+Configure miss: fixes needed for Solaris
 Configure miss: g++ option to enable C++11 features
 Configure miss: g++ option to enable C++11 features
 Configure miss: gcore
@@ -52,10 +54,10 @@ Configure miss: setpgrp2
 Configure miss: setpgrp2
 Configure miss: streampos
 Configure miss: streampos
-Configure miss: tgetent in -lmytinfo
-Configure miss: tgetent in -lmytinfo
 Configure miss: whether compiling X headers requires -fpermissive
 Configure miss: whether compiling X headers requires -fpermissive
+Configure miss: whether libXp is in the standard X library path
+Configure miss: whether libXp is in the standard X library path
 Configure miss: whether the C++ compiler (g++) accepts -mminimal-toc
 Configure miss: whether the C++ compiler (g++) accepts -mminimal-toc
 Configure miss: x86_64-generic-linux-gnu-file
